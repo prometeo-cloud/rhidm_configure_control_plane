@@ -2,3 +2,9 @@
 - name: Printing Variable
   debug:
     msg: "{{ test_dictionary }}"
+
+- name: install httpd
+  become: True
+  yum:
+    name: httpd
+    state: present
